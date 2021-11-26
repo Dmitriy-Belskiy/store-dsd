@@ -1,0 +1,24 @@
+{
+  "name": "store-dsd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitriy-Belskiy/store-dsd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmitriy-Belskiy/store-dsd/issues"
+  },
+  "homepage": "https://github.com/Dmitriy-Belskiy/store-dsd#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
