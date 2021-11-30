@@ -6,4 +6,14 @@ body{
     align-items: center;
     min-height: 100vh;
     font-family: sans-serif;
+    flex-direction: column;
+}
+table {
+    width: 1000px;
+    border: 1px solid;
+    line-height: 1.5;
+}
+th {
+    border-bottom: 1px solid;
+    text-align: left;
 }

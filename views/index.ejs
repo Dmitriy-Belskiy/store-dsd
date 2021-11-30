@@ -9,5 +9,19 @@
 </head>
 <body>
     <h1>Custom Clothes</h1>
+    <table>
+        <tr>
+            <% for (let name of names) { %>
+                <th><%= name %></th>
+            <% } %>
+        </tr>
+        <% for (let i = 0; i < goods.length; i++) { %>
+            <tr>
+                <% for (let j = 0; j < goods[i].length; j++) { %>
+                    <td><%= goods[i][j] %></td>
+                <% } %>
+            </tr>
+        <% } %>   
+    </table>
 </body>
 </html>
