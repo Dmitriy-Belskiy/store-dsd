@@ -24,7 +24,14 @@ router.get("/", function(request, response){
             console.log("Ошибка!");
         }
         console.log("Соединение с БД успешно");
-        client.close();
+        const col = client.db("myshop").collection("clothers");
+        col.find({}).toArray(function(err, data){
+            if (err){
+                console.log("Ошибка получения данных");
+            }
+            console.log(data[0]);
+            client.close();
+        })
     })
 
 
