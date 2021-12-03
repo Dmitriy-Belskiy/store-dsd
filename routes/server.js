@@ -1,6 +1,8 @@
 
 
 const router = require("express").Router();
+const dbConnect = require("./connect.js")
+
 const fs = require("fs")
 
 let goodsNames = ["Название", "Категория", "Артикул", "Цвет", "Размер", "Кол-во", "Цена", "Бренд"];
@@ -13,8 +15,19 @@ for(let i = 0; i < goods.length; i++){
 }
 // console.log(goods);
 
-router.get("/", function(require, response){
+router.get("/", function(request, response){
     // response.send("<h1>Магазин одежды</h1>");
+
+    const client = dbConnect();
+    client.connect(function(err){
+        if (err) {
+            console.log("Ошибка!");
+        }
+        console.log("Соединение с БД успешно");
+        client.close();
+    })
+
+
     response.render("index", {
         names: goodsNames,
         goods: goods
