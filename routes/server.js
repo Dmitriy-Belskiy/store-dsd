@@ -39,6 +39,17 @@ router.get("/", function(request, response){
         names: goodsNames,
         goods: goods
     })
-})
+});
+
+router.get("/add", function(request, response){
+
+
+
+    response.render("add")
+});
+router.post("/collection", function(request, response){
+    console.log(request.body);
+    response.send({"message": "ok"});
+});
 
 module.exports = router;
