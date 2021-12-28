@@ -5,24 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Clothes</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    <h1>Custom Clothes</h1>
-    <table>
-        <tr>
-            <% for (let name of names) { %>
-                <th><%= name %></th>
-            <% } %>
-        </tr>
-        <% for (let i = 0; i < goods.length; i++) { %>
-            <tr>
-                <% for (let j = 0; j < goods[i].length; j++) { %>
-                    <td><%= goods[i][j] %></td>
-                <% } %>
-            </tr>
-        <% } %>   
-    </table>
-    <a href="./collections.ejs">Our collections</a>
+    <div class="header">
+        <h1 class="name_camp">Custom Clothes</h1>
+        <button class="ourcol" onclick="document.location='./types'">Our collections</button>
+        <button onclick="document.location='./aboutus'">About Us</button>
+    </div>
+    <div class="main">
+        <div class="img1">
+            <img src="./imgs/img1.jpg" alt="-">
+            <h3>У вас есть возможность подобрать уникальный принт!</h3>
+        </div>
+        <br>
+        <div class="img2">
+            <h3>Работы современных художников!</h3>
+            <img src="./imgs/img2.jpg" alt="-">
+        </div>
+        <br>
+        <div class="img3">
+            <img src="./imgs/img3.jpg" alt="-">
+            <h3>Большая колекция!</h3>
+        </div>
+        <br>
+        <div class="img4">
+            <h3>Объединение Аниме и BTS!</h3>
+            <img src="./imgs/img4.jpg" alt="-">
+        </div>
+        <script src="./scripts/animation.js"></script>
+    </div>
 </body>
 </html>

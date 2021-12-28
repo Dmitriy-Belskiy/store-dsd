@@ -1,32 +1,26 @@
 body{
     background-color: #444;
-    color: #fff;
+    color: black;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
     min-height: 100vh;
     font-family: sans-serif;
     flex-direction: column;
+    margin: 0px;
 }
 
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 185, 185));
-    /* margin-right: 100px; */
-}
+
 
 button{
     width: 150px;
     height: 100px;
     border: solid 0px;
-    margin-left: 500px;
+    margin-left: 24px;
     background-color: transparent;
     font-size: 20px;
 }
-.backmain{
+.ourcol{
     font-size: 17px;
 }
 button{
@@ -81,23 +75,41 @@ button{
     opacity: 1;
     animation: animate 8s linear infinite;
   }
+  
 
-.table{
+
+
+.header{
+    background-color: white;
     display: flex;
-    color: black;
-    font-size: 20px;
     flex-direction: row;
-    justify-content: center;
+    height: 12vh;
+    width: 100%;
+    margin: 0px;
     align-items: center;
-    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 185, 185));
+    justify-content: center;
+    background: linear-gradient(to right, #003073,#029797);
+}
+.name_camp{
+    margin-right: 500px;
 }
 
-table {
-    width: 200vh;
-    border: 1px solid;
-    line-height: 1.5;
+
+.main{
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #003073,#029797);
 }
-th {
-    border-bottom: 1px solid;
-    text-align: left;
+
+.img1, .img3, .img2, .img4{
+    display: flex;
+    flex-direction: row;
+}
+
+.img1, .img3{
+    margin-right: 100px;
 }

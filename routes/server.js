@@ -16,6 +16,40 @@ for(let i = 0; i < goods.length; i++){
 // console.log(goods);
 
 router.get("/", function(request, response){
+    // // response.send("<h1>Магазин одежды</h1>");
+
+    // const client = dbConnect();
+    // client.connect(function(err){
+    //     if (err) {
+    //         console.log("Ошибка!");
+    //     }
+    //     console.log("Соединение с БД успешно");
+    //     const col = client.db("myshop").collection("clothers");
+    //     col.find({}).toArray(function(err, data){
+    //         if (err){
+    //             console.log("Ошибка получения данных");
+    //         }
+    //         console.log(data[0]);
+    //         client.close();
+    //     })
+    // })
+
+
+    // response.render("index", {
+    //     names: goodsNames,
+    //     goods: goods
+    // })
+    response.render("index")
+});
+
+router.get("/add", function(request, response){
+
+
+
+    response.render("add")
+});
+
+router.get("/types", function(request, response){
     // response.send("<h1>Магазин одежды</h1>");
 
     const client = dbConnect();
@@ -35,18 +69,16 @@ router.get("/", function(request, response){
     })
 
 
-    response.render("index", {
+    response.render("types", {
         names: goodsNames,
         goods: goods
     })
 });
 
-router.get("/add", function(request, response){
-
-
-
-    response.render("add")
+router.get("/aboutus", function(request, response){
+    response.render("aboutus")
 });
+
 router.post("/collection", function(request, response){
     console.log(request.body);
     response.send({"message": "ok"});
